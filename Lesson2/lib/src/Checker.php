@@ -1,5 +1,5 @@
 <?php
-namespace BracketsChecker
+namespace BracketsChecker;
 
 class Checker {
 
@@ -38,8 +38,8 @@ class Checker {
 	private function checkParam(string $str):bool {
 		preg_match($this->pattern, $str, $matches);
 		if(count($matches) > 0) {
-			throw new InvalidArgumentException("Строка может содержать только скобки", 1);
+			throw new \InvalidArgumentException("Строка может содержать только скобки", 1);
 		} 
 		return true;
 	}
-};
+}
